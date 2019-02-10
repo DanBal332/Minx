@@ -1,33 +1,18 @@
 <!DOCTYPE html>
 <style>
-    .back-img-home {
-  background-image: url("/static/background0.png");
-  height: 1000px;
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
 #banner {
 		background-color: #666666;
-		background-image: url("/static/background0.png");
+		background-image: url("/Photos/bg-img.jpg");
 		background-size: cover;
 		background-position: center center;
 		background-repeat: no-repeat;
 		color: #d8d8d8;
-		padding: 14em 0;
+		padding:15em 0;
 		text-align: center;
 		position: relative;
 	}
 
-	#banner:before {
-		content: '';
-			position: absolute;
-			left: 0;
-			top: 0;
-			width: 100%;
-			height: 100%;
-			background: rgba(64, 72, 80, 0.25);
 		}
 
 		#banner .inner {
@@ -81,11 +66,12 @@
 				text-decoration: none;
 			}
 
-.btn-sign {
+.btn-log {
   display: inline-block;
   margin-right: 10px;
   margin-left: 10px;
   padding: 12px 30px;
+  border: 1px solid blue;
   border-radius: 4px;
   background-color: blue;
   -webkit-transition: background-color 300ms ease;
@@ -98,15 +84,15 @@
   letter-spacing: 2px;
 }
 
-.btn-hollow {
+.btn-sign {
   display: inline-block;
   margin-right: 20px;
-  margin-left: 16px;
+  margin-left: 10px;
   padding: 12px 30px;
   border: 1px solid #fff;
   border-radius: 4px;
-  -webkit-transition: background-color 300ms ease, border 300ms ease, color 300ms ease;
-  transition: background-color 300ms ease, border 300ms ease, color 300ms ease;
+  -webkit-transition: background-color 300ms ease;
+  transition: background-color 300ms ease;
   color: #fff;
   font-size: 16px;
   line-height: 21px;
@@ -118,6 +104,7 @@
 </style>
 <html lang="en">
 <head>
+    <title>Welcome</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -129,39 +116,15 @@
 </head>
 
 <body>
-<!--Nav-->
-<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
-	<div class="container-fluid">
-		<a class="navbar-brand" href="#"><img class="rounded-circle article-img" src="logo.png"></a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse " id="navbarResponsive">
-			<ul class="navbar-nav">
-				<li class="nav-item">
-				<a class="nav-link" href="#"> Home </a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#"> About </a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#"> Sign In </a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#"> Blog </a>
-			</li>
-		</ul>
-	</div>
-	</div>
-</nav>
+
 <!--Banner-->
 <section id="banner">
     <div class="inner">
-        <h2>This is UnlimitedTechWorks</h2>
-        <p> Exploring the present, future and past </p>
+        <h2>This is ShadowWeb</h2>
+        <p> Please log in or sign up.</p>
         <ul class="actions">
-            <li><a href="{{ url_for('users.register') }}" class="btn-sign"> Sign Up </a>
-                <a href="{{ url_for('main.about') }}" class="btn-hollow"> Learn More </a></li>
+            <a href="#" class="btn-log">Log In</a>
+            <a href="#" class="btn-sign">Sign Up</a>
         </ul>
     </div>
 </section>
