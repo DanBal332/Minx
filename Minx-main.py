@@ -17,12 +17,12 @@ def detail():
     return render_template("detail.html", title="Detail")
 
 
-@app.route("/login")
+@app.route("/login", methods=['GET', 'POST'])
 def login():
     return render_template("login.html", title="Login")
 
 
-@app.route("/SignUp")
+@app.route("/SignUp", methods=['GET', 'POST'])
 def signup():
     return render_template("signup.html", title="Sign Up")
 
