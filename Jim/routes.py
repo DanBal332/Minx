@@ -1,16 +1,9 @@
-from flask import Flask, render_template, url_for, flash, redirect, request
+from flask import render_template, url_for, flash, redirect, request
 from flask_login import current_user, login_required
-from flask_sqlalchemy import SQLAlchemy
-from flask_bcrypt import Bcrypt
-from forms import RegistrationForm, LoginForm
-from models import User
-
-
-app = Flask(__name__)
-app.config['SECRET_KEY'] = 'e23e8f9e119d62e3dc30b88fce520c54c'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///web.database'
-db = SQLAlchemy()
-bcrypt = Bcrypt()
+from Jim import app
+from Jim.models import User
+from Jim.forms import RegistrationForm, LoginForm
+from Jim import db, bcrypt
 
 
 @app.route("/")

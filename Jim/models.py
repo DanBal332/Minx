@@ -1,4 +1,4 @@
-from routes import db
+from Jim import db
 
 
 class User(db.Model):
