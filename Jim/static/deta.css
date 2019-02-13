@@ -1,0 +1,69 @@
+.splitl {
+    height: 100%;
+    width: 60%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.splitr {
+    height: 100%;
+    width: 40%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+}
+
+.left {
+    left: 0;
+    background-color: #f9f9f9;
+}
+
+.right {
+    right: 0;
+    background-color: #ff8c00;
+}
+
+.centered {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.post-box {
+    position: absolute;
+    left: 2.5%;
+    width: 65%;
+    height: 80%;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.comment-box {
+    position: absolute;
+    left: 70%;
+    width: 27.5%;
+    height: 80%;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.info-box {
+    position: absolute;
+    left: 2.5%;
+    top: 85%;
+    width: 95%;
+    height: 10%;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+}
