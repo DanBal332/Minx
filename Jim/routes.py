@@ -54,3 +54,13 @@ def login():
         else:
             flash("Login unsuccessful, please check email and password.", 'danger')
             return render_template("login.html", title='Login', form=form)
+
+
+@app.route("/layout")
+def layout():
+    return render_template("layout.html")
+
+
+@app.route("/connect")
+def connect():
+    return render_template("connect.html")
