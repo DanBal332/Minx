@@ -76,5 +76,25 @@ ul li:hover span:nth-child(1)
 
 ul li:nth-child(1) span[id="twitter"]
 {
-    background: #efed40;
+    background: #1da1f2;
+}
+
+ul li:nth-child(1) span[id="facebook"]
+{
+    background: #3b5998;
+}
+
+ul li:nth-child(1) span[id="instagram"]
+{
+    background: #e1306c;
+}
+
+ul li:nth-child(1) span[id="google-plus"]
+{
+    background: #DD4B39;
+}
+
+ul li:nth-child(1) span[id="youtube"]
+{
+    background: red;
 }
