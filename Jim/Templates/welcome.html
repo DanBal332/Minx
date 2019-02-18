@@ -1,28 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Welcome</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/static/welc.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-	<link href="style.css" rel="stylesheet">
+    <title> Welcome </title>
+    <link rel="stylesheet" href="../static/welc.css">
 </head>
-
 <body>
-<!--Banner-->
-<section id="banner">
-    <div class="inner">
-        <h2>This is ShadowWeb</h2>
-        <p> Please log in or sign up.</p>
-        <ul class="actions">
-            <a href="{{ url_for("layout") }}" class="btn-log">Log In</a>
-            <a href="{{ url_for("connect") }}" class="btn-sign">Sign Up</a>
-        </ul>
+<section>
+    <video src="../static/smoke.mp4" autoplay muted ></video>
+    <h1>
+        <span>S</span>
+        <span>H</span>
+        <span>A</span>
+        <span>D</span>
+        <span>O</span>
+        <span>W</span>
+        <span>E</span>
+        <span>B</span>
+    </h1>
+    <div class="buttons">
+        <a href="layout.html" id="login"> Login </a>
+        <a href="signup.html" id="sign"> Sign Up </a>
     </div>
 </section>
 </body>

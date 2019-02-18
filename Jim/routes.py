@@ -1,5 +1,5 @@
 from flask import render_template, url_for, flash, redirect, request
-from flask_login import login_user, current_user, logout_user, login_required
+from flask_login import login_user, current_user, logout_user
 from Jim import app, bcrypt, db
 from Jim.forms import RegistrationForm, LoginForm
 from Jim.models import User
@@ -13,7 +13,7 @@ def welcome():
 
 # Route for registration
 @app.route("/signup", methods=['GET', 'POST'])
-def register():
+def signup():
     # If user is authenticated redirect to home
     if current_user.is_authenticated:
         return redirect(url_for("home.html"))
@@ -30,12 +30,12 @@ def register():
         flash("Your account has been created!", 'success')
         return redirect(url_for("home.html"))
     # If user fails to register, redirect to signup template
-    return render_template(url_for("signup.html"))
+    return render_template(url_for("signup.html"), title="Sign Up", form=form)
 
 
 # Route for login
 @app.route("/login", methods=['GET', 'POST'])
-def login():
+def layout():
     # If user is authenticated redirect to home
     if current_user.is_authenticated:
         redirect(url_for("home.html"))
@@ -53,7 +53,7 @@ def login():
         # If form validation fails or email and password don't match, redirect to login
         else:
             flash("Login unsuccessful, please check email and password.", 'danger')
-            return render_template("login.html", title='Login', form=form)
+            return render_template("layout.html", title='Login', form=form)
 
 
 @app.route("/layout")
@@ -64,3 +64,9 @@ def layout():
 @app.route("/connect")
 def connect():
     return render_template("connect.html")
+
+
+@app.route("/logout")
+def logout():
+    logout_user()
+    return redirect(url_for('home'))

@@ -1,99 +1,170 @@
-#banner {
-		background-color: #666666;
-		background-image: url("/Jim/photos/bg-img.jpg");
-		background-size: cover;
-		background-position: center center;
-		background-repeat: no-repeat;
-		color: #d8d8d8;
-		padding:15em 0;
-		text-align: center;
-		position: relative;
-	}
-
-
-
-		#banner .inner {
-			position: relative;
-			z-index: 1;
-		}
-
-			#banner .inner :last-child {
-				margin-bottom: 0;
-			}
-
-		#banner h2, #banner h3, #banner h4, #banner h5, #banner h6 {
-			color: #ffffff;
-		}
-
-		#banner .button.alt {
-			box-shadow: inset 0 0 0 1px rgba(144, 144, 144, 0.75);
-			color: #ffffff !important;
-		}
-
-			#banner .button.alt:hover {
-				background-color: rgba(144, 144, 144, 0.275);
-			}
-
-			#banner .button.alt:active {
-				background-color: rgba(144, 144, 144, 0.4);
-			}
-
-			#banner .button.alt.icon:before {
-				color: #c1c1c1;
-			}
-
-		#banner .button {
-			min-width: 12em;
-		}
-
-		#banner h2 {
-			font-size: 3.5em;
-			line-height: 1em;
-			margin: 0 0 0.5em 0;
-			padding: 0;
-		}
-
-		#banner p {
-			font-size: 1.5em;
-			margin-bottom: 2em;
-		}
-
-			#banner p a {
-				color: #ffffff;
-				text-decoration: none;
-			}
-
-.btn-log {
-  display: inline-block;
-  margin-right: 10px;
-  margin-left: 10px;
-  padding: 12px 30px;
-  border: 1px solid blue;
-  border-radius: 4px;
-  background-color: blue;
-  -webkit-transition: background-color 300ms ease;
-  transition: background-color 300ms ease;
-  color: #fff;
-  font-size: 16px;
-  line-height: 21px;
-  font-weight: 300;
-  text-align: center;
-  letter-spacing: 2px;
+body {
+	margin: 0;
+	padding: 0;
 }
 
-.btn-sign {
-  display: inline-block;
-  margin-right: 20px;
-  margin-left: 10px;
-  padding: 12px 30px;
-  border: 1px solid #fff;
-  border-radius: 4px;
-  -webkit-transition: background-color 300ms ease;
-  transition: background-color 300ms ease;
-  color: #fff;
-  font-size: 16px;
-  line-height: 21px;
-  font-weight: 300;
-  text-align: center;
-  letter-spacing: 2px;
+section {
+	height: 100vh;
+	background: #000000;
+}
+
+section:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to right, red, orange, yellow, green, blue, rebeccapurple);
+	mix-blend-mode: color;
+	pointer-events: none;
+}
+
+video {
+	object-fit: cover;
+}
+
+h1 {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100%;
+	text-align: center;
+	color: #ddd;
+	font-size: 5rem;
+	font-family: sans-serif;
+	letter-spacing: 0.2em;
+}
+
+h1 span {
+	opacity: 0;
+	display: inline-block;
+	animation: animate .5s linear forwards;
+}
+
+h1 span:nth-child(1){
+	animation-delay: 1s;
+}
+h1 span:nth-child(2){
+	animation-delay: 2s;
+}
+h1 span:nth-child(3){
+	animation-delay: 2.5s;
+}
+h1 span:nth-child(4){
+	animation-delay: 3s;
+}
+h1 span:nth-child(5){
+	animation-delay: 3.5s;
+}
+h1 span:nth-child(6){
+	animation-delay: 3.75s;
+}
+h1 span:nth-child(7){
+	animation-delay: 4s;
+}
+h1 span:nth-child(8){
+	animation-delay: 4.5s;
+}
+
+@keyframes animate {
+	0% {
+		opacity: 0;
+		transform: rotateY(90deg);
+		filter: blur(10px);
+	}
+	100% {
+		opacity: 1;
+		transform: rotateY(0deg);
+		filter: blur(0);
+	}
+}
+
+.buttons {
+	position: absolute;
+	top: 75%;
+	left: 40%;
+}
+
+.buttons a {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 120px;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	color: #ffffff;
+	font-size: 24px;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-family: sans-serif;
+	box-sizing: border-box;
+	background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+	background-size: 400%;
+	border-radius: 30px;
+	z-index: 1;
+	animation: appear 4s linear forwards;
+	opacity: 0;
+}
+
+.buttons a[id='login']{
+	animation-delay: 6s;
+}
+.buttons a[id='sign']{
+	animation-delay: 6s;
+}
+
+a:hover {
+	animation: trans 8s linear infinite;
+}
+
+@keyframes trans {
+	0%
+	{
+		background-position: 0%;
+	}
+	100%
+	{
+		background-position: 400%;
+	}
+}
+
+@keyframes appear {
+	0%
+	{
+		opacity: 0;
+	}
+	100%
+	{
+		opacity: 1;
+	}
+}
+
+.buttons a:before {
+	content: '';
+	position: absolute;
+	top: -5px;
+	left: -5px;
+	right: -5px;
+	bottom: -5px;
+	z-index: -1;
+	background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+	background-size: 400%;
+	border-radius: 30px;
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.buttons a:hover:before {
+	filter: blur(20px);
+	opacity: 1;
+	animation: trans 8s linear infinite;
+}
+
+.buttons a[id='sign']{
+	margin-left: 300px;
 }
