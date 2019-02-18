@@ -107,15 +107,6 @@ h1 span:nth-child(8){
 	background-size: 400%;
 	border-radius: 30px;
 	z-index: 1;
-	animation: appear 4s linear forwards;
-	opacity: 0;
-}
-
-.buttons a[id='login']{
-	animation-delay: 6s;
-}
-.buttons a[id='sign']{
-	animation-delay: 6s;
 }
 
 a:hover {
@@ -130,17 +121,6 @@ a:hover {
 	100%
 	{
 		background-position: 400%;
-	}
-}
-
-@keyframes appear {
-	0%
-	{
-		opacity: 0;
-	}
-	100%
-	{
-		opacity: 1;
 	}
 }
 
