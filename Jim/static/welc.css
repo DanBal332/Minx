@@ -82,21 +82,124 @@ h1 span:nth-child(8){
 	}
 }
 
+section:after {
+	margin: 0;
+	padding: 0;
+	top: 100%;
+	background-color: #ffffff;
+}
+
+.quotes {
+    width: 1200px;
+    min-height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.quotes .box {
+	top: 200px;
+	left: 30%;
+    position: relative;
+    width: 360px;
+    height: 400px;
+    background: #ffffff;
+    overflow: hidden;
+    transition: .5s;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 30px;
+    box-shadow: -10px 25px 50px rgba(0,0,0,.2);
+}
+
+.quotes .box:hover {
+     box-shadow: -20px 50px 100px rgba(0,0,0,.5);
+}
+
+.quotes .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: 0.5s;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+}
+
+.quotes .box p {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+.quotes .box:hover p {
+   color: #ffffff;
+}
+
+.quotes .box h2 {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.quotes .box:hover h2 {
+   color: #ffffff;
+}
+
 .buttons {
-	position: absolute;
-	top: 75%;
-	left: 40%;
+	margin: 0;
+	padding: 0;
+	top: 100%;
+	background-color: black;
+}
+
+.quotes .box.box1:hover ~ .buttons,
+.quotes .box.box1:hover
+{
+    opacity: 1;
+    background: linear-gradient(#0319f4, #e91e63);
+}
+
+.quotes .box.box2:hover ~ .buttons,
+.quotes .box.box2:hover
+{
+    opacity: 1;
+    background: linear-gradient(#ffc107, #19fd36);
+}
+
+.quotes .box.box3:hover ~ .buttons,
+.quotes .box.box3:hover
+{
+    opacity: 1;
+    background: linear-gradient(#ffc107, #e91e63);
+}
+
+.quotes .box:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, .2);
 }
 
 .buttons a {
-	position: absolute;
-	top: 50%;
-	left: 50%;
+	margin: 20px;
+	position: relative;
+	left: 40%;
 	transform: translate(-50%, -50%);
 	width: 120px;
 	height: 60px;
 	text-align: center;
-	line-height: 60px;
+	line-height: 800px;
 	color: #ffffff;
 	font-size: 24px;
 	text-transform: uppercase;
@@ -116,13 +219,14 @@ a:hover {
 @keyframes trans {
 	0%
 	{
-		background-position: 0%;
+		background-position: 0;
 	}
 	100%
 	{
 		background-position: 400%;
 	}
 }
+
 
 .buttons a:before {
 	content: '';
@@ -133,9 +237,9 @@ a:hover {
 	bottom: -5px;
 	z-index: -1;
 	background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
-	background-size: 400%;
+	background-size: 500%;
 	border-radius: 30px;
-	opacity: 0;
+	opacity: 1;
 	transition: 0.5s;
 }
 
@@ -143,8 +247,4 @@ a:hover {
 	filter: blur(20px);
 	opacity: 1;
 	animation: trans 8s linear infinite;
-}
-
-.buttons a[id='sign']{
-	margin-left: 300px;
 }
