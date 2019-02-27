@@ -1,5 +1,5 @@
 from flask import render_template, url_for, flash, redirect, request
-from flask_login import login_user, current_user, logout_user
+from flask_login import login_user, current_user, logout_user, login_required
 from Jim import app, bcrypt, db
 from Jim.forms import RegistrationForm, LoginForm
 from Jim.models import User
@@ -8,7 +8,7 @@ from Jim.models import User
 @app.route("/")
 @app.route("/welcome")
 def welcome():
-    return render_template('welcome.html')
+    return render_template("welcome.html")
 
 
 # Route for registration
@@ -34,7 +34,7 @@ def signup():
 
 
 # Route for login
-@app.route("/login", methods=['GET', 'POST'])
+@app.route("/layout", methods=['GET', 'POST'])
 def layout():
     # If user is authenticated redirect to home
     if current_user.is_authenticated:
@@ -53,17 +53,12 @@ def layout():
         # If form validation fails or email and password don't match, redirect to login
         else:
             flash("Login unsuccessful, please check email and password.", 'danger')
-            return render_template("layout.html", title='Login', form=form)
-
-
-@app.route("/layout")
-def layout():
-    return render_template("layout.html")
+            return render_template(url_for("layout.html"), title='Login', form=form)
 
 
 @app.route("/connect")
 def connect():
-    return render_template("connect.html")
+    return render_template(url_for("connect.html"))
 
 
 @app.route("/logout")

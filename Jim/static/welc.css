@@ -99,6 +99,7 @@ section:after {
 }
 
 .quotes .box {
+	margin: 20px;
 	top: 200px;
 	left: 30%;
     position: relative;
@@ -141,7 +142,7 @@ section:after {
 
 .quotes .box h2 {
     position: absolute;
-    bottom: 30px;
+    bottom: 40px;
     right: 30px;
     margin: 20px;
     padding: 0;
@@ -198,13 +199,14 @@ section:after {
 
 .buttons a {
 	margin: 20px;
+	padding: 10px;
 	position: relative;
 	left: 40%;
 	transform: translate(-50%, -50%);
 	width: 120px;
 	height: 60px;
 	text-align: center;
-	line-height: 800px;
+	line-height: 460px;
 	color: #ffffff;
 	font-size: 24px;
 	text-transform: uppercase;
