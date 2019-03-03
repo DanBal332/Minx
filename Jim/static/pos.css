@@ -1,0 +1,144 @@
+/* Post itself */
+
+.post-box {
+    position: absolute;
+    left: 2.5%;
+    width: 65%;
+    height: 80%;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.poster {
+    height: 7%;
+}
+
+.poster-prof {
+    height: 95%;
+    border-radius: 50%;
+}
+
+.pp-p {
+    padding-top: 0.75%;
+    padding-left: 1%;
+}
+
+.prname {
+    font-family: "Helvetica";
+    position: absolute;
+    top: 0.6%;
+    right: 1%;
+}
+
+.pname {
+    font-family: "Copperplate";
+    font-size: 200%;
+    position: absolute;
+    top: 0.5%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+}
+
+/* Comments */
+
+.comment-box {
+    position: absolute;
+    left: 70%;
+    width: 27.5%;
+    height: 80%;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.titl {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-bottom: 11px;
+    color: #a2a2a2;
+    font-family: Copperplate;
+}
+
+.com-hr {
+    color: #a2a2a2;
+}
+
+.padl-div {
+    padding-left: 4%;
+}
+
+.padr-div {
+    padding-right: 7%;
+}
+
+.com-div {
+    padding-left: 5%;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+    -webkit-border-radius: 0 0 0 5px;
+    -moz-border-radius: 0 0 0 5px;
+    border-radius: 0 0 0 5px;
+    border-color: #a2a2a2;
+}
+
+.rep-div {
+    padding-left: 5%;
+    border-left: 1px solid;
+    border-bottom: 1px solid;
+    -webkit-border-radius: 0 0 0 5px;
+    -moz-border-radius: 0 0 0 5px;
+    border-radius: 0 0 0 5px;
+    border-color: #a2a2a2;
+}
+
+.mini-profile {
+    float: right;
+    width: 20px;
+    border-radius: 50%;
+}
+
+.com {
+    font-family: Arial;
+}
+
+.rep {
+    font-family: Gill Sans;
+    font-style: oblique;
+}
+
+/* Post Info */
+
+.info-box {
+    position: absolute;
+    left: 2.5%;
+    top: 85%;
+    width: 95%;
+    height: 10%;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.likebox {
+    height: 100%;
+    width: 10%;
+    border-right: 1px solid;
+    border-color: #a2a2a2;
+}
+
+.like {
+    width: 30px;
+}
+
+.vert-cent {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.new-com {
+    font-family: "Arial";
+    color: #a2a2a2;
+    position: absolute;
+    top: 92.3%;
+    left: 7px;
+}
