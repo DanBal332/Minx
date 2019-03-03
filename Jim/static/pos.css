@@ -14,13 +14,11 @@
 }
 
 .poster-prof {
-    height: 95%;
+    height: 7%;
     border-radius: 50%;
-}
-
-.pp-p {
-    padding-top: 0.75%;
-    padding-left: 1%;
+    position: absolute;
+    top: 0.75%;
+    left: 1%;
 }
 
 .prname {
@@ -106,6 +104,31 @@
     font-style: oblique;
 }
 
+.coms-prof {
+    width: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 115%;
+    right: 7px;
+}
+
+.new-com {
+    font-family: "Arial";
+    color: #a2a2a2;
+    position: absolute;
+    top: 100%;
+    left: 7px;
+    width: 80%;
+    height: 100%;
+}
+
+.add-com {
+    position: absolute;
+    top: 90%;
+    left: 0;
+    width: 100%;
+}
+
 /* Post Info */
 
 .info-box {
@@ -133,12 +156,4 @@
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
-}
-
-.new-com {
-    font-family: "Arial";
-    color: #a2a2a2;
-    position: absolute;
-    top: 92.3%;
-    left: 7px;
 }
