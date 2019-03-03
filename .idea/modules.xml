@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Minx-git.iml" filepath="$PROJECT_DIR$/.idea/Minx-git.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Minx.iml" filepath="$PROJECT_DIR$/.idea/Minx.iml" />
     </modules>
   </component>
 </project>

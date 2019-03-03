@@ -1,0 +1,24 @@
+/* things that are the same across the project, e.g. colours, go here */
+
+.sidebar-bg {
+    background-color: #a2a2a2;
+}
+
+.main-bg {
+    background-image: url("../photos/bg_login.jpg");
+    background-color: #434343;
+}
+
+.box-bg {
+    background-color: #ffffff;
+}
+
+.chevron {
+    position: absolute;
+    top: 50%;
+    height: 20px;
+    left: 4px;
+}
+
+/* Below for page animations */
+

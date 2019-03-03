@@ -1,0 +1,257 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+section {
+	height: 100vh;
+	background: #000000;
+}
+
+section:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to right, red, orange, yellow, green, blue, rebeccapurple);
+	mix-blend-mode: color;
+	pointer-events: none;
+}
+
+video {
+	object-fit: cover;
+}
+
+h1 {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100%;
+	text-align: center;
+	color: #ddd;
+	font-size: 5rem;
+	font-family: sans-serif;
+	letter-spacing: 0.2em;
+}
+
+h1 span {
+	opacity: 0;
+	display: inline-block;
+	animation: animate .5s linear forwards;
+}
+
+h1 span:nth-child(1){
+	animation-delay: 1s;
+}
+h1 span:nth-child(2){
+	animation-delay: 2s;
+}
+h1 span:nth-child(3){
+	animation-delay: 2.5s;
+}
+h1 span:nth-child(4){
+	animation-delay: 3s;
+}
+h1 span:nth-child(5){
+	animation-delay: 3.5s;
+}
+h1 span:nth-child(6){
+	animation-delay: 3.75s;
+}
+h1 span:nth-child(7){
+	animation-delay: 4s;
+}
+h1 span:nth-child(8){
+	animation-delay: 4.5s;
+}
+
+@keyframes animate {
+	0% {
+		opacity: 0;
+		transform: rotateY(90deg);
+		filter: blur(10px);
+	}
+	100% {
+		opacity: 1;
+		transform: rotateY(0deg);
+		filter: blur(0);
+	}
+}
+
+section:after {
+	margin: 0;
+	padding: 0;
+	top: 100%;
+	background-color: #ffffff;
+}
+
+.quotes {
+    width: 1200px;
+    min-height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.quotes .box {
+	margin: 20px;
+	top: 200px;
+	left: 30%;
+    position: relative;
+    width: 360px;
+    height: 400px;
+    background: #ffffff;
+    overflow: hidden;
+    transition: .5s;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 30px;
+    box-shadow: -10px 25px 50px rgba(0,0,0,.2);
+}
+
+.quotes .box:hover {
+     box-shadow: -20px 50px 100px rgba(0,0,0,.5);
+}
+
+.quotes .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: 1s;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+}
+
+.quotes .box p {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+.quotes .box:hover p {
+   color: #ffffff;
+}
+
+.quotes .box h2 {
+    position: absolute;
+    bottom: 40px;
+    right: 30px;
+    margin: 20px;
+    padding: 0;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.quotes .box:hover h2 {
+   color: #ffffff;
+}
+
+.buttons {
+	position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: 0.5s;
+	opacity: 1;
+    width: 100%;
+    height: 100%;
+	background-color: black;
+}
+
+.quotes .box.box1:hover ~ .bg,
+.quotes .box.box1:hover
+{
+	opacity: 1;
+	background: linear-gradient(#0319f4, #e91e63);
+}
+
+.quotes .box.box2:hover ~ .bg,
+.quotes .box.box2:hover
+{
+    opacity: 1;
+    background: linear-gradient(#ffc107, #19fd36);
+}
+
+.quotes .box.box3:hover ~ .bg,
+.quotes .box.box3:hover
+{
+    opacity: 1;
+    background: linear-gradient(#ffc107, #e91e63);
+}
+
+.quotes .box:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, .2);
+}
+
+.buttons a {
+	margin: 20px;
+	padding: 10px;
+	position: relative;
+	left: 40%;
+	transform: translate(-50%, -50%);
+	width: 120px;
+	height: 60px;
+	text-align: center;
+	line-height: 460px;
+	color: #ffffff;
+	font-size: 24px;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-family: sans-serif;
+	box-sizing: border-box;
+	background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+	background-size: 400%;
+	border-radius: 30px;
+	z-index: 1;
+}
+
+a:hover {
+	animation: trans 8s linear infinite;
+}
+
+@keyframes trans {
+	0%
+	{
+		background-position: 0;
+	}
+	100%
+	{
+		background-position: 400%;
+	}
+}
+
+
+.buttons a:before {
+	content: '';
+	position: absolute;
+	top: -5px;
+	left: -5px;
+	right: -5px;
+	bottom: -5px;
+	z-index: -1;
+	background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+	background-size: 500%;
+	border-radius: 30px;
+	opacity: 1;
+	transition: 0.5s;
+}
+
+.buttons a:hover:before {
+	filter: blur(20px);
+	opacity: 1;
+	animation: trans 8s linear infinite;
+}
