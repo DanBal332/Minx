@@ -1,0 +1,104 @@
+/* Bottom Bar */
+
+.main {
+    height: 95%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+    left: 0;
+    right: 0;
+}
+
+.bar {
+    height: 5%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    overflow-x: hidden;
+    left: 0;
+    right: 0;
+    background-color: #606060;
+}
+
+.done-btn {
+    position: absolute;
+    top: 50%;
+    right: 2%;
+    transform: translate(-50%, -50%);
+    width: 10%;
+    height: 70%;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    text-align: center;
+}
+
+#cent {
+    font-family: sans-serif;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+}
+
+/* Overlay Styling */
+
+.box {
+    position: fixed;
+    display: block;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.a {
+    width: 30%;
+    height: 12%;
+    top: 44%;
+    left: 80%;
+}
+
+.b {
+    width: 10%;
+    height: 10%;
+    top: 12%;
+    left: 94%;
+}
+
+.box .arrow {
+    border-style: solid;
+    position: absolute;
+}
+
+.bottom {
+    border-color: rgba(0,0,0,0.8) transparent transparent transparent;
+    border-width: 8px 8px 8px 8px;
+    bottom: -8px;
+    right: 50%;
+}
+
+.top {
+    border-color: transparent transparent rgba(0,0,0,0.8) transparent;
+    border-width: 8px 8px 8px 8px;
+    top: -16px;
+    right: 50%;
+}
+
+.topr {
+    border-color: transparent transparent rgba(0,0,0,0.8) transparent;
+    border-width: 8px 8px 8px 8px;
+    top: -16px;
+    right: 25%;
+}
+
+#info {
+    color: #c8c8c8;
+    text-align: center;
+    font-family: Sans-Serif;
+}
