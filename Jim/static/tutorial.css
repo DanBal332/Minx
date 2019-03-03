@@ -15,7 +15,7 @@ body {
 }
 
 .centre {
-    bottom: 10%;
+    bottom: 20%;
     position: relative;
     width: 27.5%;
 }
@@ -144,4 +144,139 @@ body {
     }
 }
 
+.btn-container {
+    position: relative;
+    right: 16%;
+    top: 20%;
+    line-height: 300px;
+}
 
+.btn-container a {
+    padding: 9px;
+    width: 100%;
+    height: 10%;
+    color: #ffffff;
+    border-radius: 10px;
+    background: #1734a2;
+    text-decoration: none;
+    z-index: 1;
+}
+
+.btn-container span:nth-child(1) {
+    position: absolute;
+    top: 43%;
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(to right, #ffffff, #d03eff);
+    z-index: 2;
+    animation: animate1 2s linear infinite;
+}
+
+@keyframes animate1 {
+    0% {
+        transform: translateX(-100%);
+    }
+    45% {
+        opacity: 1;
+    }
+    50% {
+         transform: translateX(100%);
+         opacity: 0;
+    }
+    55% {
+        background: linear-gradient(#d03eff, #ffffff);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.btn-container span:nth-child(2) {
+    position: absolute;
+    top: 43%;
+    height: 30px;
+    width: 2px;
+    background: linear-gradient(to top, #ffffff, #d03eff);
+    animation: animate2 2s linear infinite;
+}
+
+@keyframes animate2 {
+    0% {
+        transform: translateY(100%);
+    }
+    45% {
+        opacity: 1;
+    }
+    50% {
+         transform: translateY(-100%);
+         opacity: 0;
+    }
+    55% {
+        background: linear-gradient(#d03eff, #ffffff);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+.btn-container span:nth-child(3) {
+    position: absolute;
+    bottom: 42.5%;
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(to left, #ffffff, #d03eff);
+    z-index: 2;
+    animation: animate3 2s linear infinite;
+}
+
+@keyframes animate3 {
+    0% {
+        transform: translateX(100%);
+    }
+    45% {
+        opacity: 1;
+    }
+    50% {
+         transform: translateY(-100%);
+         opacity: 0;
+    }
+    55% {
+        background: linear-gradient(#d03eff, #ffffff);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.btn-container span:nth-child(4) {
+    position: absolute;
+    top: 43%;
+    left: 100%;
+    height: 50px;
+    width: 2px;
+    background: linear-gradient(to bottom, #ffffff, #d03eff);
+    animation: animate4 2s linear infinite;
+}
+
+@keyframes animate4 {
+    0% {
+        transform: translateY(-100%);
+    }
+    45% {
+        opacity: 1;
+    }
+    50% {
+         transform: translateY(100%);
+         opacity: 0;
+    }
+    55% {
+        background: linear-gradient(#d03eff, #ffffff);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
