@@ -8,12 +8,21 @@ from Jim.models import User
 @app.route("/")
 @app.route("/welcome")
 def welcome():
-    return render_template("welcome.html")
+    return render_template('welcome.html')
 
 
-# Route for registration
+@app.route("/home")
+def home():
+    return render_template('home.html')
+
+
+@app.route("/detail")
+def detail():
+    return render_template('detail.html')
+
+
 @app.route("/signup", methods=['GET', 'POST'])
-def signup():
+def register():
     # If user is authenticated redirect to home
     if current_user.is_authenticated:
         return redirect(url_for("home.html"))
@@ -30,12 +39,12 @@ def signup():
         flash("Your account has been created!", 'success')
         return redirect(url_for("home.html"))
     # If user fails to register, redirect to signup template
-    return render_template(url_for("signup.html"), title="Sign Up", form=form)
+    return render_template(url_for("signup.html"))
 
 
 # Route for login
-@app.route("/layout", methods=['GET', 'POST'])
-def layout():
+@app.route("/login", methods=['GET', 'POST'])
+def login():
     # If user is authenticated redirect to home
     if current_user.is_authenticated:
         redirect(url_for("home.html"))
@@ -53,15 +62,14 @@ def layout():
         # If form validation fails or email and password don't match, redirect to login
         else:
             flash("Login unsuccessful, please check email and password.", 'danger')
-            return render_template(url_for("layout.html"), title='Login', form=form)
+            return render_template("login.html", title='Login', form=form)
+
+
+@app.route("/layout")
+def layout():
+    return render_template("layout.html")
 
 
 @app.route("/connect")
 def connect():
-    return render_template(url_for("connect.html"))
-
-
-@app.route("/logout")
-def logout():
-    logout_user()
-    return redirect(url_for('home'))
+    return render_template("connect.html")

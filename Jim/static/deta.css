@@ -6,6 +6,15 @@
     top: 0;
     overflow-x: hidden;
     padding-top: 20px;
+    left: 0;
+    animation-name: home-detail-big;
+    animation-duration: 1s;
+}
+
+@keyframes home-detail-big {
+    from {width: 96%}
+    to {width: 60%}
+
 }
 
 .splitr {
@@ -15,16 +24,14 @@
     z-index: 1;
     top: 0;
     overflow-x: hidden;
-}
-
-.left {
-    left: 0;
-    background-color: #f9f9f9;
-}
-
-.right {
     right: 0;
-    background-color: #ff8c00;
+    animation-name: home-detail-small;
+    animation-duration: 1s;
+}
+
+@keyframes home-detail-small {
+    from {width: 4%; color: #a2a2a2;}
+    to {width: 40%; color: black}
 }
 
 .centered {
@@ -35,35 +42,8 @@
     text-align: center;
 }
 
-.post-box {
-    position: absolute;
-    left: 2.5%;
-    width: 65%;
-    height: 80%;
-    border: 1px solid;
-    border-radius: 5px;
-}
-
-.comment-box {
-    position: absolute;
-    left: 70%;
-    width: 27.5%;
-    height: 80%;
-    border: 1px solid;
-    border-radius: 5px;
-}
-
-.info-box {
-    position: absolute;
-    left: 2.5%;
-    top: 85%;
-    width: 95%;
-    height: 10%;
-    border: 1px solid;
-    border-radius: 5px;
-}
-
-.center {
-    position: absolute;
-    top: 50%;
+.profile-pho {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
 }

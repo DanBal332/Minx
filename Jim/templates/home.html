@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../static/home.css">
+    <link rel="stylesheet" type="text/css" href="../static/universals.css">
+    <link rel="stylesheet" href="../static/pos.css">
+    <title>Home</title>
+
+</head>
+<body>
+    <div class="splitl main-bg">
+    <!-- Main area of screen  -->
+        <div class="post-box box-bg">
+            <div class="poster">
+                <div style="height: 100%;" class="pp-p">
+                    <img src="../photos/profile_pics/default1.jpg" class="poster-prof" alt="poster's profile">
+                </div>
+                <p class="prname">Poster's Name</p>
+                <p class="pname">Post Title</p>
+            </div>
+            <hr>
+         </div>
+         <div class="comment-box box-bg">
+             <h2 class="titl">Comments</h2> <!-- 'Comments' text -->
+             <br>
+             <hr class="com-hr">
+             <div style="height:84%;">
+                 <div class="padl-div">
+                     <div class="com-div">
+                         <div class="padr-div">
+                            <img src="../photos/profile_pics/default1.jpg" class="mini-profile" alt="commenter's profile">
+                         </div>
+                         <p class="com">Comment text here</p> <!-- Comment text -->
+                     </div>
+                     <div class="padl-div">
+                         <div class="rep-div">
+                             <div class="padr-div">
+                                <img src="../photos/profile_pics/default1.jpg" class="mini-profile" alt="replier's profile">
+                             </div>
+                             <p class="rep">Nested Reply 1</p> <!-- Reply text -->
+                         </div>
+                         <div class="rep-div">
+                             <div class="padr-div">
+                                <img src="../photos/profile_pics/default1.jpg" class="mini-profile" alt="replier's profile">
+                             </div>
+                             <p class="rep">Nested Reply 2</p> <!-- Reply text -->
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <div>
+                 <hr class="com-hr">
+                 <div>
+                     <div class="padr-div">
+                         <img src="../photos/profile_pics/default1.jpg" class="mini-profile" alt="my profile">
+                     </div>
+                     <p class="new-com">Type Comment Here</p>
+                 </div>
+             </div>
+         </div>
+         <div class="info-box box-bg">
+             <!-- Info - i.e. likes, dislikes, views -->
+             <div class="likebox">
+                 <div class="vert-cent">
+                     <img src="../photos/like.png" class="like" alt="like">0
+                     <!-- Like icon -->
+                     <br>
+                     <img src="../photos/like.png" class="like" style="-webkit-transform: scaleY(-1); transform: scaleY(-1);" alt="dislike">0
+                     <!-- Dislike icon - webkit for safari compatibility, transform for other browsers. Transformations flip image. -->
+                 </div>
+             </div>
+         </div>
+
+    </div>
+
+    <div class="splitr sidebar-bg">
+    <!-- Sidebar -->
+        <a href="/detail"><img src="../photos/chevrons/l_chevron.png" class="chevron" alt=""></a>
+        <!-- Open/close sidebar chevron -->
+    </div>
+</body>
+</html>

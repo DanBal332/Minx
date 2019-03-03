@@ -7,7 +7,14 @@
     overflow-x: hidden;
     padding-top: 20px;
     left: 0;
-    background-color: #f9f9f9;
+    animation-name: detail-home-big;
+    animation-duration: 1s;
+}
+
+@keyframes detail-home-big {
+    from {width: 60%;}
+    to {width: 96%}
+
 }
 
 .splitr {
@@ -18,38 +25,11 @@
     top: 0;
     overflow-x: hidden;
     right: 0;
-    background-color: #ff8c00;
+    animation-name: detail-home-small;
+    animation-duration: 1s;
 }
 
-.post-box {
-    position: absolute;
-    left: 2.5%;
-    width: 65%;
-    height: 80%;
-    border: 1px solid;
-    border-radius: 5px;
-}
-
-.comment-box {
-    position: absolute;
-    left: 70%;
-    width: 27.5%;
-    height: 80%;
-    border: 1px solid;
-    border-radius: 5px;
-}
-
-.info-box {
-    position: absolute;
-    left: 2.5%;
-    top: 85%;
-    width: 95%;
-    height: 10%;
-    border: 1px solid;
-    border-radius: 5px;
-}
-
-.center {
-    position: absolute;
-    top: 50%;
+@keyframes detail-home-small {
+    from {width: 40%}
+    to {width: 4%}
 }
