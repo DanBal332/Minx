@@ -7,30 +7,23 @@
     overflow-x: hidden;
     padding-top: 20px;
     left: 0;
-    animation-name: home-detail-big;
-    animation-duration: 1s;
-}
-
-@keyframes home-detail-big {
-    from {width: 96%}
-    to {width: 60%}
 }
 
 .splitr {
     height: 100%;
-    width: 40%;
+    width: 100%;
     position: fixed;
     z-index: 1;
     top: 0;
     overflow-x: hidden;
     right: 0;
-    animation-name: home-detail-small;
+    animation-name: detail-set-small;
     animation-duration: 1s;
 }
 
-@keyframes home-detail-small {
-    from {width: 4%; color: #a2a2a2;}
-    to {width: 40%; color: black}
+@keyframes detail-set-small {
+    from {width: 40%; color: #a2a2a2;}
+    to {width: 100%; color: black}
 }
 
 .centered {
@@ -47,9 +40,9 @@
     border-radius: 50%;
 }
 
-.cog {
+.back {
     width: 15px;
     position: absolute;
     top: 1.5%;
-    right: 3%;
+    right: 1%;
 }

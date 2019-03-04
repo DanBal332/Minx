@@ -26,6 +26,11 @@ def tutorial():
     return render_template('intro.html')
 
 
+@app.route("/settings")
+def settings():
+    return render_template('settings.html')
+
+
 @app.route("/signup", methods=['GET', 'POST'])
 def register():
     # If user is authenticated redirect to home

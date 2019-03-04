@@ -1,10 +1,22 @@
 .done-btn {
     position: absolute;
-    top: 50%;
-    right: 50%;
-    transform: translate(-50%, -50%);
-    width: 10%;
-    height: 70%;
+    top: 77%;
+    right: 55%;
+    transform: translate(0, -50%);
+    width: 40%;
+    height: 20%;
+    border-radius: 10px;
+    background: radial-gradient(circle, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    text-align: center;
+}
+
+.more-btn {
+    position: absolute;
+    top: 77%;
+    left: 55%;
+    transform: translate(0, -50%);
+    width: 40%;
+    height: 20%;
     border-radius: 10px;
     background: radial-gradient(circle, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
     text-align: center;
@@ -12,19 +24,26 @@
 
 #cent {
     font-family: sans-serif;
+    color: #000000;
+    text-decoration: none;
     position: absolute;
-    top: 70%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -25%);
     width: 100%;
     height: 100%;
 }
 
-/* Overlay Styling */
+.tick {
+    position: absolute;
+    width: 15px;
+    top: 3%;
+    right: 3%;
+}
 
 .box {
     position: fixed;
-    display: block;
+    display: none;
     transform: translate(-50%, -50%);
     background-color: rgba(0,0,0,0.8);
     border-radius: 10px;
@@ -33,52 +52,53 @@
 }
 
 .a {
-    width: 30%;
-    height: 12%;
-    top: 44%;
-    left: 80%;
+    width: 15%;
+    height: 9%;
+    top: 45%;
+    left: 20%;
+    display: block;
 }
 
 .b {
-    width: 10%;
-    height: 10%;
-    top: 12%;
-    left: 94%;
-}
-
-.c {
-    width: 15%;
-    height: 11.5%;
-    top: 38%;
-    left: 50.28%;
-}
-
-.d {
-    width: 15%;
-    height: 9%;
-    top: 72%;
-    left: 50.28%;
-}
-
-.e {
-    width: 17.5%;
-    height: 9%;
-    top: 92.8%;
-    left: 20%;
-}
-
-.f {
     width: 15%;
     height: 9%;
     top: 17%;
     left: 20%;
 }
 
-.g {
+.c {
+    width: 17.5%;
+    height: 9%;
+    top: 92.8%;
+    left: 20%;
+}
+
+.d {
+    width: 15%;
+    height: 11.5%;
+    top: 38%;
+    left: 50.28%;
+}
+
+.e {
     width: 15%;
     height: 9%;
-    top: 45%;
-    left: 20%;
+    top: 72%;
+    left: 50.28%;
+}
+
+.f {
+    width: 10%;
+    height: 10%;
+    top: 12%;
+    left: 94%;
+}
+
+.g {
+    width: 30%;
+    height: 12%;
+    top: 44%;
+    left: 80%;
 }
 
 .done {
@@ -121,7 +141,7 @@
     border-color: transparent transparent rgba(0,0,0,0.8) transparent;
     border-width: 8px 8px 8px 8px;
     top: -16px;
-    right: 15%;
+    right: 6%;
 }
 
 #info {
