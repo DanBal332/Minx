@@ -27,12 +27,12 @@
 .done-btn {
     position: absolute;
     top: 50%;
-    right: 2%;
+    right: 50%;
     transform: translate(-50%, -50%);
     width: 10%;
     height: 70%;
     border-radius: 10px;
-    background: linear-gradient(45deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background: radial-gradient(circle, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
     text-align: center;
 }
 

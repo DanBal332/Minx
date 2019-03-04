@@ -23,7 +23,7 @@ def detail():
 
 @app.route("/tutorial")
 def tutorial():
-    return render_template('tutorial.html')
+    return render_template('intro.html')
 
 
 @app.route("/signup", methods=['GET', 'POST'])
