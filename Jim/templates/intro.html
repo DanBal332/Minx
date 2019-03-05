@@ -31,43 +31,43 @@
 
 <div class="box a" id="1">
     <div class="arrow top"></div>
-    <img src="../photos/tick.png" class="tick" alt="next" id="t1">
+    <img src="../photos/tick.png" class="tick" alt="next">
     <p id="info">The post itself can be found here.</p>
 </div>
 
 <div class="box b" id="2">
     <div class="arrow top"></div>
-    <img src="../photos/tick.png" class="tick" alt="next" id="t2">
+    <img src="../photos/tick.png" class="tick" alt="next">
     <p id="info">Basic information about the post is up here.</p>
 </div>
 
 <div class="box c" id="3">
     <div class="arrow left"></div>
-    <img src="../photos/tick.png" class="tick" alt="next" id="t3">
+    <img src="../photos/tick.png" class="tick" alt="next">
     <p id="info">More information about the post above is displayed here.</p>
 </div>
 
 <div class="box d" id="4">
     <div class="arrow top"></div>
-    <img src="../photos/tick.png" class="tick" alt="next" id="t4">
+    <img src="../photos/tick.png" class="tick" alt="next">
     <p id="info">Comments on the post shown to the left appear here.</p>
 </div>
 
 <div class="box e" id="5">
     <div class="arrow bottom"></div>
-    <img src="../photos/tick.png" class="tick" alt="next" id="t5">
+    <img src="../photos/tick.png" class="tick" alt="next">
     <p id="info">Add your own comment here.</p>
 </div>
 
 <div class="box f" id="6">
     <div class="arrow topr"></div>
-    <img src="../photos/tick.png" class="tick" alt="next" id="t6">
+    <img src="../photos/tick.png" class="tick" alt="next">
     <p id="info">Click this cog to edit your profile.</p>
 </div>
 
 <div class="box g" id="7">
     <div class="arrow top"></div>
-    <img src="../photos/tick.png" class="tick" alt="next" id="t7">
+    <img src="../photos/tick.png" class="tick" alt="next">
     <p id="info">Find your profile here. It will display your user name, profile photo, bio and most recent posts. Check it at any time by simply clicking the chevron.</p>
 </div>
 
@@ -87,33 +87,11 @@
         $(document).ready(function(){
             $ ('#reuse').load('../templates/reuse.html');
 
-            $("#t1").click(function(){
-                $("#1").hide();
-                $("#2").show();
-            });
-            $("#t2").click(function(){
-                $("#2").hide();
-                $("#3").show();
-            });
-            $("#t3").click(function(){
-                $("#3").hide();
-                $("#4").show();
-            });
-            $("#t4").click(function(){
-                $("#4").hide();
-                $("#5").show();
-            });
-            $("#t5").click(function(){
-                $("#5").hide();
-                $("#6").show();
-            });
-            $("#t6").click(function(){
-                $("#6").hide();
-                $("#7").show();
-            });
-            $("#t7").click(function(){
-                $("#7").hide();
-                $("#8").show();
+            var current = 1;
+            $(".tick").click(function(){
+                $("#" + current).hide();
+                current += 1;
+                $("#" + current).show();
             });
         });
     </script>

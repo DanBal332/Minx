@@ -5,31 +5,83 @@
     <link rel="stylesheet" href="../static/sett.css">
     <link rel="stylesheet" href="../static/universals.css">
     <link rel="stylesheet" href="../static/pos.css">
-    <title>Detail</title>
+    <title>Settings</title>
 
 </head>
 <body>
      <div class="splitl main-bg">
-     <!-- Left hand side of screen: post itself -->
+     <!-- Needed for animation to look smooth, not actually visible -->
          <div id="reuse"></div>
     </div>
 
-    <div class="splitr sidebar-bg">
-    <!-- Right hand side of screen: user info -->
+    <div class="splitr">
+    <!-- Fills entire screen -->
         <a href="/detail"><img src="../photos/back.png" class="back" alt="Back"></a>
-        <div class="centered">
-            <img src="../photos/profile_pics/default1.jpg" class="profile-pho" alt="Profile Photo">
-            <h2>User Name</h2>
-            <p>User Bio</p>
-            <p>User Posts</p>
-            <!-- User info, inc. profile photo -->
+        <p class="title">Settings</p>
+        <div class="box lw">
+            <div class="box-i">
+                <strong class="subtitle">Profile</strong>
+                <div id="name change">
+                    <p id="list-elem" style="top: 6%;">Name</p>
+                    <p id="info-elem" style="top: 11.5%;">Your username is /username/. This cannot be changed, but the name others see can.</p>
+                    <input id="edit-elem" style="top: 18%;" type="text" placeholder="New Username">
+                    <a id="name-chg" class="submit" style="top: 18.2%; left: 27%;" href="#">Change</a>
+                </div>
+                <div id="photo change">
+                    <p id="list-elem" style="top: 22%;">Profile Photo</p>
+                    <p id="info-elem" style="top: 27.5%;">Your current profile photo is below. You can change it here.</p>
+                    <img src="../photos/profile_pics/default1.jpg" alt="Profile Photo" id="photo-elem" style="top:34%;">
+                    <a id="pho-chg" class="submit" style="top: 34%; left: 8%;" href="#">Change</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Popup for changing Name -->
+        <div class="popup" id="nc-pop">
+            <p class="info">Are you sure you want to change your name to /new name/?</p>
+            <div class="ok-btn">
+                <a class="cent" href="#"> Yes, sure! </a>
+            </div>
+            <div class="no-btn">
+                <a class="cent" href="#"> No, go back </a>
+            </div>
+        </div>
+
+        <!-- Popup for changing profile photo -->
+        <div class="popup" id="pp-pop">
+            <p class="info">Do you want to change your profile photo?</p>
+            <div class="ok-btn">
+                <a class="cent" href="#"> Upload a file </a>
+            </div>
+            <div class="no-btn">
+                <a class="cent" href="#"> No, cancel </a>
+            </div>
+        </div>
+
+        <div class="box lc">
+            <div class="box-i">
+                <strong class="subtitle a">Preferences</strong>
+
+            </div>
         </div>
     </div>
 
     <script src="../js/jquery_PC.js"></script>
     <script>
         $ (document).ready(function () {
-            $ ('#reuse').load('../templates/reuse.html')
+            $ ('#reuse').load('../templates/reuse.html');
+
+            $("#name-chg").click(function(){
+                $("#nc-pop").show();
+            });
+
+            $("#pho-chg").click(function(){
+                $("#pp-pop").show();
+            });
+
+            $(".no-btn").click(function(){
+                $(".popup").hide();
+            });
         })
     </script>
 </body>
