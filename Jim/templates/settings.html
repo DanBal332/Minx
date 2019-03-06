@@ -16,22 +16,33 @@
 
     <div class="splitr">
     <!-- Fills entire screen -->
-        <a href="/detail"><img src="../photos/back.png" class="back" alt="Back"></a>
+        <a href="/detail"><img src="../photos/utility/back.png" class="back" alt="Back"></a>
         <p class="title">Settings</p>
         <div class="box lw">
             <div class="box-i">
                 <strong class="subtitle">Profile</strong>
-                <div id="name change">
+
+                <!-- Name change -->
+                <div>
                     <p id="list-elem" style="top: 6%;">Name</p>
                     <p id="info-elem" style="top: 11.5%;">Your username is /username/. This cannot be changed, but the name others see can.</p>
-                    <input id="edit-elem" style="top: 18%;" type="text" placeholder="New Username">
+                    <input id="edit-elem" style="top: 18%; width: 20%;" type="text" placeholder="New Username">
                     <a id="name-chg" class="submit" style="top: 18.2%; left: 27%;" href="#">Change</a>
                 </div>
-                <div id="photo change">
+
+                <!-- Profile photo change -->
+                <div>
                     <p id="list-elem" style="top: 22%;">Profile Photo</p>
                     <p id="info-elem" style="top: 27.5%;">Your current profile photo is below. You can change it here.</p>
                     <img src="../photos/profile_pics/default1.jpg" alt="Profile Photo" id="photo-elem" style="top:34%;">
                     <a id="pho-chg" class="submit" style="top: 34%; left: 8%;" href="#">Change</a>
+                </div>
+
+                <!-- Bio change -->
+                <div>
+                    <p id="list-elem" style="top: 38%;">Bio</p>
+                    <p id="info-elem" style="top: 43.5%;">Your bio is the short description of you and it's the first thing others see.</p>
+                    <a id="b-chg" class="submit" style="top: 50.2%;" href="#">Change</a>
                 </div>
             </div>
         </div>
@@ -58,12 +69,46 @@
             </div>
         </div>
 
-        <div class="box lc">
-            <div class="box-i">
-                <strong class="subtitle a">Preferences</strong>
-
+        <!-- Popup for changing bio -->
+        <div class="popup" id="b-pop">
+            <textarea class="new-bio" placeholder="Change Bio"></textarea>
+            <div class="ok-btn">
+                <a class="cent" href="#"> Change </a>
+            </div>
+            <div class="no-btn">
+                <a class="cent" href="#"> No, cancel </a>
             </div>
         </div>
+
+        <div class="box lc">
+            <div class="box-i">
+                <strong class="subtitle a">More Information</strong>
+
+                <!-- Tutorials -->
+                <div>
+                    <p id="list-elem" style="top: 6%;">Tutorials</p>
+                    <p id="info-elem" style="top: 11.5%;">Our design is unique, so you man need some help using it. We have two tutorials:</p>
+                    <a class="submit" style="top: 18.2%;" href="/tutorial">Introduction</a>
+                    <a id="tuto-req" class="submit" style="top: 18.2%; left: 25%;" href="#">Tutorial</a>
+                </div>
+
+                <!-- Site Info -->
+                <div>
+                    <p id="list-elem" style="top: 20%;">About Us</p>
+                    <p id="info-elem" style="top: 34%;">ShadoWeb was born out of our hate of the spy culture of the internet, where every company is trying to take as much of your data as possible to sell to others. In many cases, the victims don't even know their data has been taken. That is why we founded ShadoWeb. Everything here is totally transparent, and we don't use any data you give to us for any purpose whatsoever (other than for your own profile). To stop you from becoming the victim of identity theft by others, our site's security settings are set on strict by default, so only your friends acn see your posts (unless you choose to change this). ShadoWeb was created by Jej and Danal in 2019.</p>
+                    <a id="priv-pol" class="submit" style="top: 49%;">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Popup for privacy policy -->
+        <div class="popup" id="p-pop" style="width: 30%; height: 22%;">
+            <p class="info">Our privacy policy is simple: none of the data you give to us will be used by us for anything other than displaying on your profile, and even then only if you want it to. In order for you to use our service, we need you to agree to this simple policy.</p>
+            <div id="ok" class="no-btn" style="left: 50%; top: 81%; transform: translate(-50%, -50%); height: 20%;">
+                <a class="cent"  href="#">I agree</a>
+            </div>
+        </div>
+
     </div>
 
     <script src="../js/jquery_PC.js"></script>
@@ -79,9 +124,22 @@
                 $("#pp-pop").show();
             });
 
+            $("#b-chg").click(function(){
+                $("#b-pop").show();
+            });
+
+            $("#priv-pol").click(function(){
+                $("#p-pop").show();
+            });
+
             $(".no-btn").click(function(){
                 $(".popup").hide();
             });
+
+            $("#ok").click(function(){
+                $(".popup").hide();
+            });
+
         })
     </script>
 </body>
