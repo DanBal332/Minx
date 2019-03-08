@@ -5,12 +5,12 @@
 }
 
 .main-bg {
-    background-image: url("../photos/bg_login.jpg");
-    background-color: #434343;
+    background: url("../photos/bg_login.jpg") no-repeat center center fixed #434343;
+    background-size: cover;
 }
 
 .box-bg {
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 .chevron {

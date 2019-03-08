@@ -50,5 +50,55 @@
 }
 
 h2 {
-    font-family: "Copperplate";
+    font-family: serif;
+    font-weight: bold;
+}
+
+.followers {
+    position: absolute;
+    top: 11%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 2px;
+    text-align: center;
+    font-family: sans-serif;
+    padding: 2px 2px 1px 2px;
+}
+
+.box {
+    position: relative;
+    display: none;
+    transform: translate(-50%, 0);
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 10px;
+    z-index: 2;
+    padding: 5px;
+    color: #8c8c8c;
+    font-family: sans-serif;
+    top: 100px;
+    width: 40%;
+    height: auto;
+}
+
+.box .arrow {
+    border-style: solid;
+    position: absolute;
+}
+
+.top {
+    border-color: transparent transparent rgba(0,0,0,0.6) transparent;
+    border-width: 8px 8px 8px 8px;
+    top: -8px;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+
+.a {
+    left: 25%;
+}
+
+.b {
+    left: 75%;
 }

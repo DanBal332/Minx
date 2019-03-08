@@ -28,7 +28,8 @@
 }
 
 .title {
-    font-family: Copperplate;
+    font-family: serif;
+    font-weight: bold;
     font-size: 60px;
     color: #1357ae;
     position: absolute;
@@ -53,7 +54,7 @@
     position: absolute;
     top: 51%;
     transform: translate(-50%, -50%);
-    background: linear-gradient(#1368e2, white);
+    background: linear-gradient(#1368e2, transparent);
     border-radius: 3px;
 }
 

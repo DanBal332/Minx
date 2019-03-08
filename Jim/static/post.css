@@ -7,6 +7,7 @@
     height: 80%;
     border: 1px solid;
     border-radius: 5px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
 }
 
 .poster {
@@ -22,14 +23,15 @@
 }
 
 .prname {
-    font-family: "Helvetica";
+    font-family: sans-serif;
     position: absolute;
     top: 0.6%;
     right: 1%;
 }
 
 .pname {
-    font-family: "Copperplate";
+    font-family: serif;
+    font-weight: bold;
     font-size: 200%;
     position: absolute;
     top: 0.5%;
@@ -46,6 +48,7 @@
     height: 80%;
     border: 1px solid;
     border-radius: 5px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
 }
 
 .titl {
@@ -53,8 +56,9 @@
     left: 50%;
     transform: translate(-50%, -50%);
     padding-bottom: 11px;
-    color: #a2a2a2;
-    font-family: Copperplate;
+    color: #000000;
+    font-family: serif;
+    font-weight: bold;
 }
 
 .com-hr {
@@ -73,8 +77,6 @@
     padding-left: 5%;
     border-left: 2px solid;
     border-bottom: 2px solid;
-    -webkit-border-radius: 0 0 0 5px;
-    -moz-border-radius: 0 0 0 5px;
     border-radius: 0 0 0 5px;
     border-color: #a2a2a2;
 }
@@ -83,8 +85,6 @@
     padding-left: 5%;
     border-left: 1px solid;
     border-bottom: 1px solid;
-    -webkit-border-radius: 0 0 0 5px;
-    -moz-border-radius: 0 0 0 5px;
     border-radius: 0 0 0 5px;
     border-color: #a2a2a2;
 }
@@ -96,7 +96,7 @@
 }
 
 .com {
-    font-family: Arial;
+    font-family: sans-serif;
 }
 
 .rep {
@@ -119,14 +119,15 @@
 }
 
 .new-com {
-    font-family: "Arial";
-    color: #a2a2a2;
+    font-family: sans-serif;
+    color: #000000;
     position: absolute;
     top: 115%;
     left: 7px;
     width: 80%;
     height: 100%;
     border: none;
+    background-color: transparent;
 }
 
 /* Post Info */
@@ -139,6 +140,7 @@
     height: 10%;
     border: 1px solid;
     border-radius: 5px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
 }
 
 .likebox {

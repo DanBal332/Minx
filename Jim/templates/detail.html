@@ -16,13 +16,43 @@
 
     <div class="splitr sidebar-bg">
         <div style="visibility: hidden;" id="rhs">
-    <!-- Right hand side of screen: user info -->
+        <!-- Right hand side of screen: user info -->
+            <div>
+                <!-- Number of followers and following -->
+                <div class="followers" style="left: 25%;" id="flo">Followers 1234</div>
+                <div class="followers" style="left: 75%;" id="fli">Following 1234</div>
+            </div>
+
+            <!-- Followed by dropdown -->
+            <div class="box a">
+                <div class="arrow top"></div>
+                <p>Followed by:</p>
+                <hr>
+                <p>User Name</p>
+                <hr>
+                <p>User Name</p>
+                <hr>
+                <p>User Name</p>
+            </div>
+
+            <!-- Following dropdown -->
+            <div class="box b">
+                <div class="arrow top"></div>
+                <p id="info">Following:</p>
+                <hr>
+                <p>User Name</p>
+                <hr>
+                <p>User Name</p>
+                <hr>
+                <p>User Name</p>
+            </div>
+
             <div class="centered">
+                <!-- Info about user -->
                 <img src="../photos/profile_pics/default1.jpg" class="profile-pho" alt="Profile Photo">
                 <h2>Poster's Name</h2>
                 <p>Poster's Bio</p>
                 <p>Poster's other posts</p>
-                <!-- User info, inc. profile photo -->
             </div>
         </div>
         <a href="/home"><img src="../photos/utility/r_chevron.png" class="chevron" alt=""></a>
@@ -39,6 +69,30 @@
             setTimeout(function(){
             document.getElementById('rhs').style.visibility = "visible";
             },1000);
+
+            $("#flo").click(function(){
+                if($('.a').is(':visible')){
+                    $(".a").hide();
+                }
+                else {
+                    $(".a").show();
+                }
+                if($('.b').is(':visible')){
+                    $(".b").hide();
+                }
+            });
+
+            $("#fli").click(function(){
+                if($('.b').is(':visible')){
+                    $(".b").hide();
+                }
+                else {
+                    $(".b").show();
+                }
+                if($('.a').is(':visible')){
+                    $(".a").hide();
+                }
+            });
         })
     </script>
 </body>
