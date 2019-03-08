@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../static/layout.css">
 </head>
 <body>
-<div class="LoginBox">
+<div class="LoginBox" id="L1">
 <img src="../photos/profile_pics/default1.jpg" alt="img" class="user">
     <h2>Login</h2>
     <form>
@@ -15,25 +15,35 @@
         <p>Password</p>
         <input type="password" id="password" name="" placeholder="Enter Password">
         <input type="submit" id="btn" name="" placeholder="Sign In">
-        <a id="forgot" href="#">Forgot Password?</a>
+        <a id="forgot" href="#">Forgot Password?</a> <p id="l_reg_p"> Not signed up?
+        <a id="l_reg"> Register Here </a></p>
+    </form>
+</div>
+<div class="LoginBox1" id="L2">
+<img src="../photos/profile_pics/default1.jpg" alt="img" class="user">
+    <h2>Sign Up</h2>
+    <form>
+       <p> Email </p>
+        <input type="text" name="" placeholder="Enter Email">
+        <p> Username </p>
+        <input type="text" name="" placeholder="Enter Username">
+        <p> Password </p>
+        <input type="password" name="" placeholder="Enter Password">
+        <input type="password" name="" placeholder="Confirm Password" id="conf_pass">
+        <input type="submit" id="btn2" name="" placeholder="Sign Up">
+        <p id="l_reg_p"> Already have an account? <a href="#" id="reg_l"> Login Here </a></p>
     </form>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script>
-    window.onload = function () {
-         var email = document.getElementById('email').value;
-         var password = document.getElementById('password').value;
-
-         var login_credentials = new Object();
-         login_credentials.email = email;
-         login_credentials.password = password;
-
-         var credentials_json = JSON.stringify(login_credentials);
-
-         $.post( "/login_info", {
-             javascript_data: credentials_json
-         });
-    }
-</script>
+    <script>
+        $("#l_reg").click(function () {
+            $("#L2").animate({height : "toggle", opacity : "toggle"}, "slow");
+            $("#L1").animate({height : "toggle", opacity : "toggle"}, "slow");
+        });
+        $("#reg_l").click(function () {
+            $("#L1").animate({height : "toggle", opacity : "toggle"}, "slow");
+            $("#L2").animate({height : "toggle", opacity : "toggle"}, "slow");
+        });
+    </script>
 </body>
 </html>

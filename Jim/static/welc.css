@@ -90,7 +90,7 @@ section:after {
 }
 
 .quotes {
-    width: 1200px;
+    width: 80%;
     min-height: 400px;
     display: flex;
     flex-wrap: wrap;

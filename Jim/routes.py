@@ -14,17 +14,17 @@ def welcome():
 
 @app.route("/home")
 def home():
-    return render_template('home.html')
+    return render_template(url_for('home.html'))
 
 
 @app.route("/detail")
 def detail():
-    return render_template('detail.html')
+    return render_template(url_for('detail.html'))
 
 
 @app.route("/tutorial")
 def tutorial():
-    return render_template('tutorial.html')
+    return render_template(url_for('tutorial.html'))
 
 
 @app.route('/login_info', methods=['POST'])
@@ -37,7 +37,7 @@ def get_post_javascript_data():
 def register():
     # If user is authenticated redirect to home
     if current_user.is_authenticated:
-        return redirect(url_for("home.html"))
+        return redirect(url_for('home.html'))
     form = RegistrationForm
     # If the form validates then user's data is registered within database
     if form.validate_on_submit:
@@ -49,9 +49,9 @@ def register():
         db.session.add(user)
         db.commit()
         flash("Your account has been created!", 'success')
-        return redirect(url_for("home.html"))
+        return redirect("home.html")
     # If user fails to register, redirect to signup template
-    return render_template(url_for("signup.html"))
+    return render_template(url_for('signup.html'))
 
 
 # Route for login
@@ -59,7 +59,7 @@ def register():
 def login():
     # If user is authenticated redirect to home
     if current_user.is_authenticated:
-        redirect(url_for("home.html"))
+        redirect(url_for('home.html'))
     form = LoginForm
     # If from validates, this function checks whether email and password match in database
     if form.validate_on_submit():
@@ -70,13 +70,13 @@ def login():
             # Next page: the page user needs login to access
             next_page = request.args.get('next')
             # Leads user to page they couldn't access before login
-            return redirect(next_page) if next_page else redirect(url_for("home.html"))
+            return redirect(next_page) if next_page else redirect("home.html")
         # If form validation fails or email and password don't match, redirect to login
         else:
             flash("Login unsuccessful, please check email and password.", 'danger')
-            return render_template("layout.html", title='Login', form=form)
+            return render_template((url_for('layout.html')), title='Login', form=form)
 
 
 @app.route("/connect")
 def connect():
-    return render_template("connect.html")
+    return render_template(url_for('connect.html'))

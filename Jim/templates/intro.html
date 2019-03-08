@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/deta.css">
+    <link rel="stylesheet" href="../static/universals.css">
+    <link rel="stylesheet" href="../static/pos.css">
+    <link rel="stylesheet" href="../static/intr.css">
+    <title>Welcome</title>
+
+</head>
+<body>
+<div class="splitl main-bg">
+<!-- Left hand side of screen: post itself -->
+    <div id="reuse"></div>
+</div>
+
+<div class="splitr sidebar-bg">
+    <!-- Right hand side of screen: user info -->
+    <img src="../photos/cog.png" class="cog" alt="Cog">
+    <div class="centered">
+        <img src="../photos/profile_pics/default1.jpg" class="profile-pho" alt="Profile Photo">
+        <h2>User Name</h2>
+        <p>User Bio</p>
+        <p>User Posts</p>
+        <!-- User info, inc. profile photo -->
+    </div>
+    <img src="../photos/chevrons/r_chevron.png" class="chevron" alt="">
+    <!-- Open/close sidebar chevron -->
+</div>
+
+<div class="box a" id="1">
+    <div class="arrow top"></div>
+    <img src="../photos/tick.png" class="tick" alt="next">
+    <p id="info">The post itself can be found here.</p>
+</div>
+
+<div class="box b" id="2">
+    <div class="arrow top"></div>
+    <img src="../photos/tick.png" class="tick" alt="next">
+    <p id="info">Basic information about the post is up here.</p>
+</div>
+
+<div class="box c" id="3">
+    <div class="arrow left"></div>
+    <img src="../photos/tick.png" class="tick" alt="next">
+    <p id="info">More information about the post above is displayed here.</p>
+</div>
+
+<div class="box d" id="4">
+    <div class="arrow top"></div>
+    <img src="../photos/tick.png" class="tick" alt="next">
+    <p id="info">Comments on the post shown to the left appear here.</p>
+</div>
+
+<div class="box e" id="5">
+    <div class="arrow bottom"></div>
+    <img src="../photos/tick.png" class="tick" alt="next">
+    <p id="info">Add your own comment here.</p>
+</div>
+
+<div class="box f" id="6">
+    <div class="arrow topr"></div>
+    <img src="../photos/tick.png" class="tick" alt="next">
+    <p id="info">Click this cog to edit your profile.</p>
+</div>
+
+<div class="box g" id="7">
+    <div class="arrow top"></div>
+    <img src="../photos/tick.png" class="tick" alt="next">
+    <p id="info">Find your profile here. It will display your user name, profile photo, bio and most recent posts. Check it at any time by simply clicking the chevron.</p>
+</div>
+
+<div class="box done" id="8">
+    <p id="info">Well done, you've got to the end of this demo. You can come back here or find more information about how to use this site under the cog we just showed you.</p>
+    <div class="done-btn">
+        <a id="cent" href="/detail"> OK, got it! </a>
+    </div>
+    <div class="more-btn">
+        <a id="cent" href="#"> Show me more </a>
+    </div>
+</div>
+
+
+    <script src="../js/jquery_PC.js"></script>
+    <script>
+        $(document).ready(function(){
+            $ ('#reuse').load('../templates/reuse.html');
+
+            var current = 1;
+            $(".tick").click(function(){
+                $("#" + current).hide();
+                current += 1;
+                $("#" + current).show();
+            });
+        });
+    </script>
+</body>
+</html>
