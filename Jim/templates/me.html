@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../static/detail.css">
     <link rel="stylesheet" href="../static/universals.css">
+    <link rel="stylesheet" href="../static/detail.css">
+    <link rel="stylesheet" href="../static/me.css">
     <link rel="stylesheet" href="../static/post.css">
-    <title>Detail</title>
+    <title>My Profile</title>
 
 </head>
 <body>
@@ -16,19 +17,18 @@
 
     <div class="splitr sidebar-bg">
         <div style="visibility: hidden;" id="rhs">
-    <!-- Right hand side of screen: user info -->
+        <!-- Right hand side of screen: user info -->
+            <a href="/home"><img src="../photos/utility/back.png" class="back" alt="Back"></a>
+            <a href="/settings"><img src="../photos/utility/cog.png" class="cog" alt="Cog"></a>
             <div class="centered">
+                <div class="follower" style="left: 150%;"><div>Followers</div></div>
+                <div class="follower" style="right: 170%;"><div>Following</div></div>
                 <img src="../photos/profile_pics/default1.jpg" class="profile-pho" alt="Profile Photo">
-                <h2>Poster's Name</h2>
-                <p>Poster's Bio</p>
-                <p>Poster's other posts</p>
+                <h2>My Name</h2>
+                <p>My Bio</p>
                 <!-- User info, inc. profile photo -->
             </div>
         </div>
-        <a href="/home"><img src="../photos/utility/r_chevron.png" class="chevron" alt=""></a>
-        <!-- Open/close sidebar chevron -->
-
-
     </div>
 
     <script src="../js/jquery_PC.js"></script>

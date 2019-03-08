@@ -1,3 +1,5 @@
+/* Style sheet for detail.html, me.html, intro.html, */
+
 .splitl {
     height: 100%;
     width: 60%;
@@ -29,15 +31,15 @@
 }
 
 @keyframes home-detail-small {
-    from {width: 4%; color: #a2a2a2;}
-    to {width: 40%; color: black}
+    from {width: 4%;}
+    to {width: 40%;}
 }
 
 .centered {
     position: absolute;
-    top: 20%;
+    top: 5%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0);
     text-align: center;
 }
 
@@ -47,9 +49,16 @@
     border-radius: 50%;
 }
 
-.cog {
-    width: 15px;
+h2 {
+    font-family: "Copperplate";
+}
+
+.follower {
     position: absolute;
-    top: 1.5%;
-    right: 3%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+    width: 15%;
+    height: 10%;
+    border: 5px black;
+    border-radius: 5px;
 }

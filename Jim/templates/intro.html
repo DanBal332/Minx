@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../static/deta.css">
+    <link rel="stylesheet" href="../static/detail.css">
     <link rel="stylesheet" href="../static/universals.css">
-    <link rel="stylesheet" href="../static/pos.css">
-    <link rel="stylesheet" href="../static/intr.css">
+    <link rel="stylesheet" href="../static/post.css">
+    <link rel="stylesheet" href="../static/intro.css">
     <title>Welcome</title>
 
 </head>
@@ -27,6 +27,16 @@
     </div>
     <img src="../photos/utility/r_chevron.png" class="chevron" alt="">
     <!-- Open/close sidebar chevron -->
+</div>
+
+<div class="box done" id="begin" style="display: block;">
+    <p id="info">Welcome to ShadoWeb. To start, we'd like to show you a bit about our site. You can skip this titorial if you want to.</p>
+    <div class="done-btn" id="start">
+        <a id="cent"> OK, show me!</a>
+    </div>
+    <div class="more-btn">
+        <a id="cent" href="/detail">Skip tutorial</a>
+    </div>
 </div>
 
 <div class="box a" id="1">
@@ -77,7 +87,7 @@
         <a id="cent" href="/detail"> OK, got it! </a>
     </div>
     <div class="more-btn">
-        <a id="cent" href="#"> Show me more </a>
+        <a id="cent" href="/settings"> Show me more </a>
     </div>
 </div>
 
@@ -88,6 +98,12 @@
             $ ('#reuse').load('../templates/reuse.html');
 
             var current = 1;
+
+            $("#start").click(function(){
+                $("#begin").hide();
+                $("#" + current).show();
+            });
+
             $(".tick").click(function(){
                 $("#" + current).hide();
                 current += 1;

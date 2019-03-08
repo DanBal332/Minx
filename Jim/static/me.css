@@ -1,0 +1,15 @@
+/* stylesheet for me.html */
+
+.cog {
+    width: 15px;
+    position: absolute;
+    top: 1.5%;
+    left: 2%;
+}
+
+.back {
+    width: 18px;
+    position: absolute;
+    top: 1%;
+    right: 2%;
+}
