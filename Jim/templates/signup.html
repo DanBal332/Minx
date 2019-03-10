@@ -3,22 +3,9 @@
 <head>
     <meta charset="utf-8">
      <title>Account</title>
-    <link rel="stylesheet" href="../static/layout.css">
+    <link rel="stylesheet" href="../static/signup.css">
 </head>
 <body>
-<div class="LoginBox" id="L1">
-<img src="../photos/profile_pics/default1.jpg" alt="img" class="user">
-    <h2>Login</h2>
-    <form>
-        <p>Email</p>
-        <input type="text" id="email" name="" placeholder="Enter Email">
-        <p>Password</p>
-        <input type="password" id="password" name="" placeholder="Enter Password">
-        <input type="submit" id="btn" name="" placeholder="Sign In">
-        <a id="forgot" href="#">Forgot Password?</a> <p id="l_reg_p"> Not signed up?
-        <a id="l_reg"> Register Here </a></p>
-    </form>
-</div>
 <div class="LoginBox1" id="L2">
 <img src="../photos/profile_pics/default1.jpg" alt="img" class="user">
     <h2>Sign Up</h2>
@@ -34,13 +21,26 @@
         <p id="l_reg_p"> Already have an account? <a href="#" id="reg_l"> Login Here </a></p>
     </form>
 </div>
+<div class="LoginBox" id="L1">
+<img src="../photos/profile_pics/default1.jpg" alt="img" class="user">
+    <h2>Login</h2>
+    <form>
+        <p>Email</p>
+        <input type="text" id="email" name="" placeholder="Enter Email">
+        <p>Password</p>
+        <input type="password" id="password" name="" placeholder="Enter Password">
+        <input type="submit" id="btn" name="" placeholder="Sign In">
+        <a id="forgot" href="#">Forgot Password?</a> <p id="l_reg_p"> Not signed up?
+        <a id="l_reg"> Register Here </a></p>
+    </form>
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script>
-        $("#l_reg").click(function () {
+        $("#reg_l").click(function () {
             $("#L2").animate({height : "toggle", opacity : "toggle"}, "slow");
             $("#L1").animate({height : "toggle", opacity : "toggle"}, "slow");
         });
-        $("#reg_l").click(function () {
+        $("#l_reg").click(function () {
             $("#L1").animate({height : "toggle", opacity : "toggle"}, "slow");
             $("#L2").animate({height : "toggle", opacity : "toggle"}, "slow");
         });
