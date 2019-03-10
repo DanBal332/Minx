@@ -1,4 +1,4 @@
-/* Post itself */
+/* Post box */
 
 .post-box {
     position: absolute;
@@ -10,36 +10,44 @@
     box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
 }
 
-.poster {
+.postname {
+    position: relative;
+    top: 0;
+    left: 0;
     height: 7%;
+    width: 100%;
+    border-bottom: 1px solid;
 }
 
-.poster-prof {
-    height: 7%;
-    border-radius: 50%;
+#post-name {
     position: absolute;
-    top: 0.75%;
-    left: 1%;
-}
-
-.prname {
-    font-family: sans-serif;
-    position: absolute;
-    top: 0.6%;
-    right: 1%;
-}
-
-.pname {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -43%);
     font-family: serif;
     font-weight: bold;
-    font-size: 200%;
-    position: absolute;
-    top: 0.5%;
-    left: 50%;
-    transform: translate(-50%, -75%);
+    font-size: 5vh;
 }
 
-/* Comments */
+#poster-name {
+    position: absolute;
+    top: 50%;
+    right: 1%;
+    transform: translate(0, -43%);
+    font-family: sans-serif;
+    font-size: 2.5vh;
+}
+
+#poster-photo {
+    position: absolute;
+    top: 50%;
+    left: 1%;
+    height: 90%;
+    border-radius: 50%;
+    transform: translate(0, -50%);
+}
+
+/* Comments box */
 
 .comment-box {
     position: absolute;
@@ -51,83 +59,98 @@
     box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
 }
 
-.titl {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding-bottom: 11px;
-    color: #000000;
+.com-title {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 5%;
+    width: 100%;
+    border-bottom: 1px solid;
+    line-height: 150%; /* vertically centres text */
     font-family: serif;
     font-weight: bold;
+    font-size: 3vh;
+    text-align: center;
+
 }
 
-.com-hr {
-    color: #a2a2a2;
-}
-
-.padl-div {
-    padding-left: 4%;
-}
-
-.padr-div {
-    padding-right: 7%;
-}
-
-.com-div {
-    padding-left: 5%;
-    border-left: 2px solid;
-    border-bottom: 2px solid;
-    border-radius: 0 0 0 5px;
-    border-color: #a2a2a2;
-}
-
-.rep-div {
-    padding-left: 5%;
-    border-left: 1px solid;
-    border-bottom: 1px solid;
-    border-radius: 0 0 0 5px;
-    border-color: #a2a2a2;
-}
-
-.mini-profile {
-    float: right;
-    width: 20px;
-    border-radius: 50%;
-}
-
-.com {
+#comment {
+    position: relative;
+    top: 3%;
+    left: 5%;
+    height: 7%;
+    width: 91.4%;
+    border-bottom: 2px solid #a2a2a2;
+    border-left: 2px solid #a2a2a2;
+    border-bottom-left-radius: 5px;
+    line-height: 245%; /* vertically centres text */
     font-family: sans-serif;
+    font-size: 2.5vh;
+    text-align: left;
+    padding-left: 3%;
 }
 
-.rep {
-    font-family: Gill Sans;
-}
-
-.add-com {
-    position: absolute;
-    top: 90%;
-    left: 0;
-    width: 100%;
-}
-
-.coms-prof {
-    width: 20px;
-    border-radius: 50%;
-    position: absolute;
-    top: 115%;
-    right: 7px;
+#reply {
+    position: relative;
+    top: 3%;
+    left: 10%;
+    height: 6%;
+    width: 86.7%;
+    border-bottom: 1px solid #a2a2a2;
+    border-left: 1px solid #a2a2a2;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    line-height: 245%; /* vertically centres text */
+    font-family: sans-serif;
+    font-size: 2vh;
+    text-align: left;
+    padding-left: 3%;
 }
 
 .new-com {
-    font-family: sans-serif;
-    color: #000000;
     position: absolute;
-    top: 115%;
-    left: 7px;
-    width: 80%;
-    height: 100%;
+    bottom: 0;
+    left: 0;
+    height: 7%;
+    width: 100%;
+    border-top: 1px solid;
+}
+
+#type-comment {
+    position: relative;
+    top: 50%;
+    left: 3%;
+    width: 70%;
+    height: 70%;
+    transform: translate(0, -52%);
+    background: transparent;
     border: none;
-    background-color: transparent;
+}
+
+#post {
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    transform: translate(0, -40%);
+    font-family: sans-serif;
+    font-size: 2vh;
+    color: #1da1f2;
+    text-decoration: none;
+}
+
+#post:hover {
+    font-size: 2.5vh;
+    color: #1357ae;
+    text-decoration: underline;
+}
+
+#img {
+    position: absolute;
+    top: 50%;
+    right: 2%;
+    height: 70%;
+    border-radius: 50%;
+    transform: translate(0, -50%);
 }
 
 /* Post Info */
@@ -141,21 +164,4 @@
     border: 1px solid;
     border-radius: 5px;
     box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
-}
-
-.likebox {
-    height: 100%;
-    width: 10%;
-    border-right: 1px solid;
-    border-color: #a2a2a2;
-}
-
-.like {
-    width: 30px;
-}
-
-.vert-cent {
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
 }
