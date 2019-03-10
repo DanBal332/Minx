@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../static/home.css">
+    <link rel="stylesheet" type="text/css" href="../static/universals.css">
+    <link rel="stylesheet" href="../static/post.css">
+    <link rel="stylesheet" href="../static/tutorial.css">
+    <title>Home</title>
+
+</head>
+<body>
+    <div class="splitl main-bg">
+    <!-- Main area of screen  -->
+        <div id="reuse"></div>
+    </div>
+
+    <div class="splitr sidebar-bg">
+    <!-- Sidebar -->
+        <img src="../photos/utility/l_chevron.png" class="chevron" alt="">
+        <!-- Open/close sidebar chevron -->
+    </div>
+
+    <div class="box done" id="begin" style="display: block;">
+        <p id="info">Welcome to ShadoWeb. To start, we'd like to show you a bit about our site. You can skip this titorial if you want to.</p>
+        <div class="done-btn" id="start">
+            <a id="cent">OK, show me!</a>
+        </div>
+        <div class="more-btn">
+            <a id="cent" href="/settings">Cancel Tutorial</a>
+        </div>
+    </div>
+
+    <div class="box a" id="1">
+        <div class="arrow top"></div>
+        <img src="../photos/utility/tick.png" class="tick" alt="next">
+        <p id="info"></p>
+    </div>
+
+    <script src="../js/jquery_PC.js"></script>
+    <script>
+        $ (document).ready(function () {
+            $ ('#reuse').load('../templates/reuse.html')
+
+            var current = 1;
+
+            $("#start").click(function(){
+                $("#begin").hide();
+                $("#" + current).show();
+            });
+
+            $(".tick").click(function(){
+                $("#" + current).hide();
+                current += 1;
+                $("#" + current).show();
+            });
+        })
+    </script>
+</body>
+</html>

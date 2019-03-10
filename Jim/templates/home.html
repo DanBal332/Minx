@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../static/home.css">
     <link rel="stylesheet" type="text/css" href="../static/universals.css">
-    <link rel="stylesheet" href="../static/pos.css">
+    <link rel="stylesheet" href="../static/post.css">
     <title>Home</title>
 
 </head>
@@ -17,7 +17,7 @@
 
     <div class="splitr sidebar-bg">
     <!-- Sidebar -->
-        <a href="/detail"><img src="../photos/chevrons/l_chevron.png" class="chevron" alt=""></a>
+        <a href="/detail"><img src="../photos/utility/l_chevron.png" class="chevron" alt=""></a>
         <!-- Open/close sidebar chevron -->
     </div>
 
@@ -25,7 +25,14 @@
     <script>
         $ (document).ready(function () {
             $ ('#reuse').load('../templates/reuse.html')
-        })
+        });
+        $('#reuse').keypress(function(event){
+            var keycode = (event.keyCode ? event.keyCode : event.which);
+            if (keycode === 13){
+                var comment = document.getElementById('comment1').value;
+                $(".com-hr").append().addClass('.com-div').text(comment);
+            }
+        });
     </script>
 </body>
 </html>

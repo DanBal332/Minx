@@ -1,3 +1,5 @@
+/* stylesheet for intro.html, tutorial.html */
+
 .done-btn {
     position: absolute;
     top: 77%;
@@ -52,10 +54,52 @@
 }
 
 .a {
-    width: 22%;
-    height: 20%;
-    top: 50%;
-    left: 50%;
+    width: 15%;
+    height: 9%;
+    top: 45%;
+    left: 20%;
+}
+
+.b {
+    width: 15%;
+    height: 9%;
+    top: 17%;
+    left: 20%;
+}
+
+.c {
+    width: 17.5%;
+    height: 9%;
+    top: 92.8%;
+    left: 20%;
+}
+
+.d {
+    width: 15%;
+    height: 11.5%;
+    top: 38%;
+    left: 50.28%;
+}
+
+.e {
+    width: 15%;
+    height: 9%;
+    top: 72%;
+    left: 50.28%;
+}
+
+.f {
+    width: 10%;
+    height: 10%;
+    top: 12%;
+    left: 94%;
+}
+
+.g {
+    width: 30%;
+    height: 12%;
+    top: 44%;
+    left: 80%;
 }
 
 .done {

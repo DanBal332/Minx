@@ -22,14 +22,14 @@
 }
 
 .prname {
-    font-family: "Helvetica";
+    font-family: sans-serif;
     position: absolute;
     top: 0.6%;
     right: 1%;
 }
 
 .pname {
-    font-family: "Copperplate";
+    font-family: sans-serif;
     font-size: 200%;
     position: absolute;
     top: 0.5%;
@@ -101,7 +101,13 @@
 
 .rep {
     font-family: Gill Sans;
-    font-style: oblique;
+}
+
+.add-com {
+    position: absolute;
+    top: 90%;
+    left: 0;
+    width: 100%;
 }
 
 .coms-prof {
@@ -116,17 +122,11 @@
     font-family: "Arial";
     color: #a2a2a2;
     position: absolute;
-    top: 100%;
+    top: 115%;
     left: 7px;
     width: 80%;
     height: 100%;
-}
-
-.add-com {
-    position: absolute;
-    top: 90%;
-    left: 0;
-    width: 100%;
+    border: none;
 }
 
 /* Post Info */
